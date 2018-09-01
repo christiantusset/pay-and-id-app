@@ -3,11 +3,11 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NewCardPage } from '../pages/new-card/new-card';
 import {UserProfilePage} from "../pages/user-profile/user-profile";
+import { PalmRegisterPage } from '../pages/palm-register/palm-register';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +25,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Dashboard', component: DashboardPage },
-      { title: 'Cadastro de dispositivo', component: HomePage },
+      { title: 'Cadastro de dispositivo', component: PalmRegisterPage },
       { title: 'Dados Pessoais', component: UserProfilePage },
       { title: 'Sair', component: LoginPage }
     ];

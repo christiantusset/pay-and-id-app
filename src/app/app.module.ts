@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { PalmRegisterPage } from '../pages/palm-register/palm-register';
 import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -17,11 +17,12 @@ import { DashboardService } from '../providers/dashboard-service/dashboard-servi
 import { CardListPage } from '../pages/card-list/card-list';
 import { NewCardPage } from '../pages/new-card/new-card';
 import {UserProfilePage} from "../pages/user-profile/user-profile";
+import { QRScanner } from '@ionic-native/qr-scanner';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    PalmRegisterPage,
     ListPage,
     LoginPage,
     DashboardPage,
@@ -32,12 +33,12 @@ import {UserProfilePage} from "../pages/user-profile/user-profile";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    PalmRegisterPage,
     ListPage,
     LoginPage,
     DashboardPage,
@@ -51,7 +52,8 @@ import {UserProfilePage} from "../pages/user-profile/user-profile";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthenticatedRequest,
     AuthenticationService,
-    DashboardService
+    DashboardService,
+    QRScanner
   ]
 })
 export class AppModule {}
