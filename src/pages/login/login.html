@@ -1,0 +1,42 @@
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row padding justify-content-center align-items-center>
+     
+      <div  class="text-center logo-text">
+      <h1>
+        Pay & Id
+      </h1>
+    </div>
+    </ion-row>
+    <ion-row justify-content-center align-items-center>
+       
+    <ion-card>
+      <ion-card-header>
+        Entrar
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+
+          <ion-item>
+            <ion-label floating>Usuário</ion-label>
+            <ion-input [(ngModel)]="userName" type="text"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label floating>Senha</ion-label>
+            <ion-input [(ngModel)]="password" type="password"></ion-input>
+          </ion-item>
+        
+          
+          <div padding></div>
+          <button (click)="login()" padding ion-button full>Login</button>  
+        
+          <button (click)="login()" padding ion-button full>Registrar</button>  
+        
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>

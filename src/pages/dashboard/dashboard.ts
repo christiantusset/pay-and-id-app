@@ -1,0 +1,91 @@
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Chart } from 'chart.js'
+import { DashboardService } from '../../providers/dashboard-service/dashboard-service';
+import { Dashboard } from '../../app/dashboard';
+
+@Component({
+    selector: 'page-dashboard',
+    templateUrl: 'dashboard.html',
+})
+export class DashboardPage implements OnInit {
+
+    @ViewChild('transactionsCanvas') transactionsCanvas;
+
+    transactionsChart: any;
+    dashboard: Dashboard;
+    loaded = false;
+    constructor(public navCtrl: NavController, public navParams: NavParams, public dashboardService: DashboardService, private loadingCtrl: LoadingController) {
+
+
+    }
+
+    mock = true;
+
+
+    getMockResult() {
+        this.transactionsChart = new Chart(this.transactionsCanvas.nativeElement, {
+            type: 'line',
+            data: {
+                labels: ["11:50", "12:50", "13:50", "14:50"],
+                datasets: [{
+                    data: [{ x: 10, y: 80 }, { x: 20, y: 85 }, { x: 30, y: 90 }, { x: 40, y: 80 }],
+                    label: 'Transações',
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    
+    }
+
+    getRealResult() {
+        let loading = this.loadingCtrl.create({
+            content: "Carregando...",
+        });
+
+        loading.present();
+
+        this.dashboardService.getDashboard()
+            .then((dashboard: Dashboard) => {
+                this.dashboard = dashboard;
+                loading.dismiss();
+                this.loaded = true;
+            })
+            .catch(err => {
+                console.error(err);
+            
+            })
+    }
+    ngOnInit() {
+
+
+        if (!this.mock) {
+            this.getRealResult();
+            
+
+        } else {
+            this.loaded = true;
+            this.getMockResult();
+
+        }
+    }
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad DashboardPage');
+    }
+
+}
