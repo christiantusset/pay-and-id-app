@@ -1,10 +1,25 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+
+
+class Card {
+  number: string;
+  owner: string;
+  brand: string;
+  description: string;
+  constructor(number: string, owner: string, brand: string, description: string) {
+    this.number = number;
+    this.owner = owner;
+    this.brand = brand;
+    this.description = description;
+  }
+}
 @Component({
   selector: 'page-card-list',
   templateUrl: 'card-list.html'
 })
+
 export class CardListPage {
   selectedItem: any;
   icons: string[];
@@ -26,7 +41,14 @@ export class CardListPage {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
+
+    this.cards = [
+      new Card('0000 0000 0000 1111', 'RAFAEL DE OLIVEIRA', 'master-card', 'Nubank'),
+      new Card('0000 0000 0000 2222', 'RAFAEL DE OLIVEIRA', 'visa', 'Santander Gold')
+    ]
   }
+
+  public cards: Card[];
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!

@@ -9,18 +9,19 @@
 
 <ion-content>
   
-  <ion-card>
+  <ion-card *ngFor="let card of cards">
     <ion-card-header>
-      Nubank
+      {{card.description}}
     </ion-card-header>
     <ion-card-content>
 
       <ion-list>
         <ion-item-sliding>
           <ion-item>
-            <ion-icon name="card" item-start></ion-icon>
+            <img class="card-icon" [src]="'../assets/imgs/brands/' + card.brand + '.svg'"/>
+            
+            <span class="description">{{card.number}}</span>
 
-            <span class="description">0000 0000 0000 1111</span>
           </ion-item>
           <ion-item-options side="right">
             <button ion-button color="primary">
