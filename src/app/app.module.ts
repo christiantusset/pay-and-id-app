@@ -16,6 +16,7 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { DashboardService } from '../providers/dashboard-service/dashboard-service';
 import { CardListPage } from '../pages/card-list/card-list';
 import { NewCardPage } from '../pages/new-card/new-card';
+import {UserProfilePage} from "../pages/user-profile/user-profile";
 
 @NgModule({
   declarations: [
@@ -25,8 +26,8 @@ import { NewCardPage } from '../pages/new-card/new-card';
     LoginPage,
     DashboardPage,
     CardListPage,
-    NewCardPage
-
+    NewCardPage,
+    UserProfilePage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,8 @@ import { NewCardPage } from '../pages/new-card/new-card';
     LoginPage,
     DashboardPage,
     CardListPage,
-    NewCardPage
+    NewCardPage,
+    UserProfilePage
   ],
   providers: [
     StatusBar,

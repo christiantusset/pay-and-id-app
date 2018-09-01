@@ -4,10 +4,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NewCardPage } from '../pages/new-card/new-card';
+import {UserProfilePage} from "../pages/user-profile/user-profile";
 
 @Component({
   templateUrl: 'app.html'
@@ -26,6 +26,7 @@ export class MyApp {
     this.pages = [
       { title: 'Dashboard', component: DashboardPage },
       { title: 'Cadastro de dispositivo', component: HomePage },
+      { title: 'Dados Pessoais', component: UserProfilePage },
       { title: 'Sair', component: LoginPage }
     ];
 

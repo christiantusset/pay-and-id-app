@@ -7,8 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class UserProfilePage {
 
-  constructor(public navCtrl: NavController) {
+  public userName = 'Christian Tusset';
+  public email = 'christiantusset@gmail.com';
+  public telefone = '47997061245';
+  public senha = '123456';
 
+  constructor(public navCtrl: NavController) {
   }
 
+  salvar() {
+    console.log('Salvo com sucesso!');
+  }
 }
