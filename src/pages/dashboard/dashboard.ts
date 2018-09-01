@@ -79,6 +79,6 @@ export class DashboardPage implements OnInit {
     }
 
     cardListPage() {
-        this.navCtrl.setRoot(CardListPage);
+        this.navCtrl.push(CardListPage);
     }
 }

@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { DashboardService } from '../providers/dashboard-service/dashboard-service';
 import { CardListPage } from '../pages/card-list/card-list';
+import { NewCardPage } from '../pages/new-card/new-card';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CardListPage } from '../pages/card-list/card-list';
     ListPage,
     LoginPage,
     DashboardPage,
-    CardListPage
+    CardListPage,
+    NewCardPage
 
   ],
   imports: [
@@ -38,7 +40,8 @@ import { CardListPage } from '../pages/card-list/card-list';
     ListPage,
     LoginPage,
     DashboardPage,
-    CardListPage
+    CardListPage,
+    NewCardPage
   ],
   providers: [
     StatusBar,
