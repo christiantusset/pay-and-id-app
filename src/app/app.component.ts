@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { DashboardPage } from '../pages/dashboard/dashboard';
+import { NewCardPage } from '../pages/new-card/new-card';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +15,7 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = DashboardPage;
+  rootPage: any = NewCardPage;
 
   pages: Array<{title: string, component: any}>;
 
