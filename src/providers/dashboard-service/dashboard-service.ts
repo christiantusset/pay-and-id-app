@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import LoginResponse from '../../app/login-response';
 import LoginRequest from '../../app/login-request';
 import Configuration from '../../app/configuration';
-import { Dashboard } from '../../app/dashboard';
+// import { Dashboard } from '../../app/dashboard';
 
 
 @Injectable()
@@ -15,9 +15,9 @@ export class DashboardService {
 
   private serviceUrl = Configuration.apiBaseUrl + 'dashboard/';
 
-  getDashboard(): Promise<Dashboard> {
-    return this.http.get<Dashboard>(this.serviceUrl)
-      .toPromise();
-  }
+  // getDashboard(): Promise<Dashboard> {
+  //   return this.http.get<Dashboard>(this.serviceUrl)
+  //     .toPromise();
+  // }
  
 }

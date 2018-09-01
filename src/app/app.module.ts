@@ -14,6 +14,7 @@ import { AuthenticationService } from '../providers/authentication-service/authe
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { DashboardService } from '../providers/dashboard-service/dashboard-service';
+import { CardListPage } from '../pages/card-list/card-list';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { DashboardService } from '../providers/dashboard-service/dashboard-servi
     HomePage,
     ListPage,
     LoginPage,
-    DashboardPage
+    DashboardPage,
+    CardListPage
+
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { DashboardService } from '../providers/dashboard-service/dashboard-servi
     HomePage,
     ListPage,
     LoginPage,
-    DashboardPage
+    DashboardPage,
+    CardListPage
   ],
   providers: [
     StatusBar,

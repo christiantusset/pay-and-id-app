@@ -14,7 +14,7 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = DashboardPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -25,7 +25,6 @@ export class MyApp {
     this.pages = [
       { title: 'Dashboard', component: DashboardPage },
       { title: 'Cadastro de dispositivo', component: HomePage },
-      // { title: 'Dispoitivos cadastrados', component: HomePage },
       { title: 'Sair', component: LoginPage }
     ];
 

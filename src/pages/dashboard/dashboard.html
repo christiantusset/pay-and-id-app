@@ -8,51 +8,24 @@
 </ion-header>
 
 <ion-content padding [hidden]="!loaded">
-<!-- 
+
   <ion-card>
     <ion-card-header>
-
-      Alertas
+        <ion-icon name="card"></ion-icon> Cartões
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content text-center padding>
+        <h1> Você possui 5 cartões cadastrados</h1>
 
-      <ion-list>
-        <ion-item-sliding>
-          <ion-item>
-            <ion-icon style="color: red;" name="warning" item-start></ion-icon>
-
-            <span class="description">Bateria do CDI comprometida.</span>
-          </ion-item>
-          <ion-item-options side="right">
-            <button ion-button color="primary">
-              <ion-icon name="archive"></ion-icon>
-              Arquivar
-            </button>
-          </ion-item-options>
-
-        </ion-item-sliding>
-      </ion-list>
-
-    </ion-card-content>
-  </ion-card> -->
-  <ion-card>
-    <ion-card-header>
-      Cartões
-    </ion-card-header>
-    <ion-card-content>
-      <h1>Você tem 5 cartões cadastrados</h1>
     </ion-card-content>
     <ion-list>
-        <button ion-item>
-          Detalhes
-        </button>
-        <!-- </ion-note> -->
-      
+        <button ion-item text-right (click)="cardListPage()">
+          Detalhes <ion-icon name="arrow-round-forward"></ion-icon>
+        </button>      
     </ion-list>
   </ion-card>
   <ion-card>
     <ion-card-header>
-      Transações
+        <ion-icon name="cash"></ion-icon> Transações
     </ion-card-header>
     <ion-card-content>
       <canvas #transactionsCanvas></canvas>

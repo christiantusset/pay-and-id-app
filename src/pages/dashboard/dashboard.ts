@@ -2,7 +2,7 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Chart } from 'chart.js'
 import { DashboardService } from '../../providers/dashboard-service/dashboard-service';
-import { Dashboard } from '../../app/dashboard';
+import { CardListPage } from '../card-list/card-list';
 
 @Component({
     selector: 'page-dashboard',
@@ -13,7 +13,6 @@ export class DashboardPage implements OnInit {
     @ViewChild('transactionsCanvas') transactionsCanvas;
 
     transactionsChart: any;
-    dashboard: Dashboard;
     loaded = false;
     constructor(public navCtrl: NavController, public navParams: NavParams, public dashboardService: DashboardService, private loadingCtrl: LoadingController) {
 
@@ -60,16 +59,7 @@ export class DashboardPage implements OnInit {
 
         loading.present();
 
-        this.dashboardService.getDashboard()
-            .then((dashboard: Dashboard) => {
-                this.dashboard = dashboard;
-                loading.dismiss();
-                this.loaded = true;
-            })
-            .catch(err => {
-                console.error(err);
-            
-            })
+    
     }
     ngOnInit() {
 
@@ -88,4 +78,7 @@ export class DashboardPage implements OnInit {
         console.log('ionViewDidLoad DashboardPage');
     }
 
+    cardListPage() {
+        this.navCtrl.setRoot(CardListPage);
+    }
 }

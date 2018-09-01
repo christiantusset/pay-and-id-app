@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Meus Cartões</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-card>
+    <ion-card-header>
+      Nubank
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-list>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-icon name="card" item-start></ion-icon>
+
+            <span class="description">0000 0000 0000 1111</span>
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color="primary">
+              <ion-icon name="archive"></ion-icon>
+              Inativar
+            </button>
+            <button ion-button color="danger">
+                <ion-icon name="trash"></ion-icon>
+                Remover
+              </button>
+          </ion-item-options>
+
+        </ion-item-sliding>
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-card *ngFor="let card of cards">
+    <ion-card-body></ion-card-body>
+  </ion-card> -->
+
+
+</ion-content>
