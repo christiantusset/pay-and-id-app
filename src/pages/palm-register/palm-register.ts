@@ -34,8 +34,9 @@ export class PalmRegisterPage implements OnInit {
         this.waitForPalmSecure();
         
     }, (err) => {
-        console.log("Error occured : " + err);
+        console.log(err);
         if(err === 'cordova_not_available') {
+          this.waitingPalmSecure = true;
           this.waitForPalmSecure();
         }
     });  
