@@ -8,12 +8,14 @@ class History {
   name: string;
   value: string;
   note: string;
-  constructor(icon: string, type: string, name: string, value: string, note: string) {
+  card: string;
+  constructor(icon: string, type: string, name: string, value: string, note: string, card: string) {
     this.icon = icon;
     this.type = type;
     this.name = name;
     this.value = value;
     this.note = note;
+    this.card = card;
   }
 }
 
@@ -33,27 +35,32 @@ export class HistoryListPage {
         'Pizzaria',
         'Pizzaria Massa Fina',
         '73,15',
-        'Ontem'),
+        'Agosto 30, 2018',
+        'Santander Gold'),
       new History ('cafe',
         'Café',
         'Café São José',
         '23,40',
-        'Agosto 28, 2018'),
+        'Agosto 28, 2018',
+        'Nubank'),
       new History ( 'md-git-branch',
         'Eletrônicos',
         'Kabum',
         '813,38',
-        'Agosto 27, 2018'),
+        'Agosto 27, 2018',
+        'Nubank'),
       new History ( 'beer',
         'Cervejaria',
         'Opa Bier',
         '73,15',
-        'Agosto 25, 2018'),
+        'Agosto 25, 2018',
+        'Santander Gold'),
       new History ( 'cart',
         'Supermercado',
         'Angeloni Super Ltda',
         '176,15',
-        'Agosto 21, 2018')
+        'Agosto 21, 2018',
+        'Santander Gold')
     ]
   }
 

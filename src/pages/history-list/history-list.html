@@ -14,11 +14,17 @@
       <span class="comercio"> {{hist.type}}</span>
       <h2>{{hist.name}}</h2>
     </ion-item>
-    <ion-card-header>
+    <ion-card-header class="card-header-valor">
       <span class="valor" item-start>R$ {{hist.value}}</span>
     </ion-card-header>
     <ion-row>
-      <ion-col center text-right>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="md-card"></ion-icon>
+          <div> {{hist.card}}</div>
+        </button>
+      </ion-col>
+      <ion-col class="col-note" center text-right>
         <ion-note>
           {{hist.note}}
         </ion-note>

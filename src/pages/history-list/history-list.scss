@@ -1,5 +1,15 @@
 page-history-list {
 
+  .card-header-valor {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 16px;
+  }
+
+  .col-note {
+    padding-top: 14px;
+  }
+
   .valor {
     font-size: 25px;
     font-weight: bold;
@@ -9,4 +19,5 @@ page-history-list {
   .comercio {
     font-weight: bold;
   }
+
 }

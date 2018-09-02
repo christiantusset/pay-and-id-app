@@ -27,9 +27,13 @@ export class DashboardPage implements OnInit {
         this.transactionsChart = new Chart(this.transactionsCanvas.nativeElement, {
             type: 'line',
             data: {
-                labels: ["05/2018", "06/2018", "07/2018", "08/2018"],
+                labels: ["21/08", "25/08", "27/08", "28/08", "30/08"],
                 datasets: [{
-                    data: [{ x: 10, y: 523 }, { x: 20, y: 934 }, { x: 30, y: 1723 }, { x: 40, y: 1159 }],
+                    data: [{ x: 10, y: 73.15 },
+                      { x: 20, y: 23.40 },
+                      { x: 30, y: 813.38 },
+                      { x: 40, y: 73.15 },
+                      { x: 10, y: 176.15 }],
                     label: 'Transações',
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.2)'
