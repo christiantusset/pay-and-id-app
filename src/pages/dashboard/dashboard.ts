@@ -29,7 +29,7 @@ export class DashboardPage implements OnInit {
             data: {
                 labels: ["05/2018", "06/2018", "07/2018", "08/2018"],
                 datasets: [{
-                    data: [{ x: 10, y: 1523 }, { x: 20, y: 1699 }, { x: 30, y: 1769 }, { x: 40, y: 1159 }],
+                    data: [{ x: 10, y: 523 }, { x: 20, y: 934 }, { x: 30, y: 1723 }, { x: 40, y: 1159 }],
                     label: 'Transações',
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.2)'
