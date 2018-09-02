@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { SelectCardListPage } from '../selectcard-list/selectcard-list';
+import { NewPaymentPage } from '../new-payment/new-payment';
+
 
 @Component({
   selector: 'password-card',
@@ -14,11 +15,7 @@ export class PasswordCardPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  confirmPassword() {
-    this.navCtrl.push(SelectCardListPage);
-  }
-
-  cancelPassword() {
-    this.navCtrl.pop();
+  password() {
+    this.navCtrl.push(NewPaymentPage);
   }
 }
