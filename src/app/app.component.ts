@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
 import { DashboardPage } from '../pages/dashboard/dashboard';
-import { NewCardPage } from '../pages/new-card/new-card';
 import {UserProfilePage} from "../pages/user-profile/user-profile";
 import { PalmRegisterPage } from '../pages/palm-register/palm-register';
 

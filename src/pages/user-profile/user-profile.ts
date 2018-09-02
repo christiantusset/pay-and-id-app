@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'user-profile',
@@ -12,10 +12,15 @@ export class UserProfilePage {
   public telefone = '47997061245';
   public senha = '123456';
 
-  constructor(public navCtrl: NavController) {
+  constructor(public alertCtrl: AlertController) {
   }
 
-  salvar() {
-    console.log('Salvo com sucesso!');
+  public save() {
+    const alert = this.alertCtrl.create({
+      title: 'Salvo!',
+      subTitle: 'Os dados do usuário foram salvo com sucesso!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 }
