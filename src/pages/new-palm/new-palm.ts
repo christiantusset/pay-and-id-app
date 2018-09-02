@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { WaitPalmPage } from '../wait-palm/wait-palm';
+import { NewPaymentPage } from '../new-payment/new-payment';
 
 @Component({
   selector: 'page-new-palm',
@@ -8,17 +9,18 @@ import { WaitPalmPage } from '../wait-palm/wait-palm';
 })
 export class NewPalmPage implements OnInit {
 
+  public selfQRCode: string = 'sure we will win';
+
   constructor(public navCtrl: NavController) {
   }    
   
   ngOnInit(): void {
-         
+    setTimeout(() => {
+      this.navCtrl.push(WaitPalmPage, {nextPage: NewPaymentPage})
+    }, 2000);
   }
 
-  next() {
-    this.navCtrl.push(WaitPalmPage);
-  
-  }
+
 
   back() {
     this.navCtrl.pop();

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-wait-palm',
@@ -7,30 +7,20 @@ import { NavController } from 'ionic-angular';
 })
 export class WaitPalmPage implements OnInit {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }    
-  
-  scanData : {};
-
-  isPalmRegistered = false;
-
-  waitingPalmSecure = false;
+ 
 
   paymentValue: number;
   ngOnInit(): void {
-         
-  }
-
-  scan() {
- 
-  
+    this.waitForPalmSecure();
   }
   
   waitForPalmSecure() {
     setTimeout(() => {
-      this.isPalmRegistered = true;
-      this.waitingPalmSecure = true;
-    }, 7000);
+      this.navCtrl.pop();
+      this.navCtrl.push(this.navParams.get('nextPage'));
+    }, 3000);
   }
 
 }

@@ -24,6 +24,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { NewPaymentPage } from '../pages/new-payment/new-payment';
 import { WaitPalmPage } from '../pages/wait-palm/wait-palm';
 import { NewPalmPage } from '../pages/new-palm/new-palm';
+import { QRCodeModule } from 'angularx-qrcode';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { NewPalmPage } from '../pages/new-palm/new-palm';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
+    QRCodeModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

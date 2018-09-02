@@ -2,18 +2,15 @@
 
 <ion-content padding>
   <div><h3>PAY&ID</h3></div>
-   
 
-  <div class="payment">
-
-    
+  <div class="payment" text-center>
+      <h3>Escaneie esse código no aplicativo PAY&ID</h3>
+     <qrcode [qrdata]="selfQRCode" [size]="256" [level]="'M'"></qrcode>
 
   </div>
 
   <ion-fab left bottom>
       <button (click)="back()" ion-fab color="danger"><ion-icon name="close"></ion-icon></button>
   </ion-fab>
-
-
 
 </ion-content>

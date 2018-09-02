@@ -15,7 +15,7 @@ import {NewPalmPage} from '../pages/new-palm/new-palm';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = NewPalmPage;
 
   pages: Array<{title: string, component: any}>;
 
