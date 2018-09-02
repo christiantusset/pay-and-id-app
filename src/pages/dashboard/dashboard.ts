@@ -3,6 +3,7 @@ import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Chart } from 'chart.js'
 import { DashboardService } from '../../providers/dashboard-service/dashboard-service';
 import { CardListPage } from '../card-list/card-list';
+import { HistoryListPage } from '../history-list/history-list';
 
 @Component({
     selector: 'page-dashboard',
@@ -28,7 +29,7 @@ export class DashboardPage implements OnInit {
             data: {
                 labels: ["05/2018", "06/2018", "07/2018", "08/2018"],
                 datasets: [{
-                    data: [{ x: 10, y: 80 }, { x: 20, y: 110 }, { x: 30, y: 60 }, { x: 40, y: 80 }],
+                    data: [{ x: 10, y: 1523 }, { x: 20, y: 1699 }, { x: 30, y: 1769 }, { x: 40, y: 1159 }],
                     label: 'Transações',
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.2)'
@@ -49,7 +50,7 @@ export class DashboardPage implements OnInit {
                 }
             }
         });
-    
+
     }
 
     getRealResult() {
@@ -59,14 +60,14 @@ export class DashboardPage implements OnInit {
 
         loading.present();
 
-    
+
     }
     ngOnInit() {
 
 
         if (!this.mock) {
             this.getRealResult();
-            
+
 
         } else {
             this.loaded = true;
@@ -81,4 +82,9 @@ export class DashboardPage implements OnInit {
     cardListPage() {
         this.navCtrl.push(CardListPage);
     }
+
+    historyListPage() {
+      this.navCtrl.push(HistoryListPage);
+    }
+
 }
