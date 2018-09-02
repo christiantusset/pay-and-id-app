@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 import { NewCardPage } from '../new-card/new-card';
 
 
-
 class Card {
   number: string;
   owner: string;
@@ -16,6 +15,7 @@ class Card {
     this.description = description;
   }
 }
+
 @Component({
   selector: 'page-card-list',
   templateUrl: 'card-list.html'
