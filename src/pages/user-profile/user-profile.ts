@@ -16,7 +16,6 @@ export class UserProfilePage {
   }
 
   public save() {
-    //this.navCtrl.pop();
     const alert = this.alertCtrl.create({
       title: 'Salvo!',
       subTitle: 'Os dados do usuário foram salvo com sucesso!',
