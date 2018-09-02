@@ -1,20 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { NewCardPage } from '../new-card/new-card';
+import Card from '../../app/card';
 
-
-class Card {
-  number: string;
-  owner: string;
-  brand: string;
-  description: string;
-  constructor(number: string, owner: string, brand: string, description: string) {
-    this.number = number;
-    this.owner = owner;
-    this.brand = brand;
-    this.description = description;
-  }
-}
 
 @Component({
   selector: 'page-card-list',
