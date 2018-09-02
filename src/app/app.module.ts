@@ -15,13 +15,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { DashboardService } from '../providers/dashboard-service/dashboard-service';
 import { CardListPage } from '../pages/card-list/card-list';
+import { SelectCardListPage } from '../pages/selectcard-list/selectcard-list';
+import { PasswordCardPage } from '../pages/password-card/password-card';
 import { HistoryListPage } from '../pages/history-list/history-list';
 import { NewCardPage } from '../pages/new-card/new-card';
-import {UserProfilePage} from "../pages/user-profile/user-profile";
+import { UserProfilePage } from "../pages/user-profile/user-profile";
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { NewPaymentPage } from '../pages/new-payment/new-payment';
 import { WaitPalmPage } from '../pages/wait-palm/wait-palm';
 import { NewPalmPage } from '../pages/new-palm/new-palm';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { NewPalmPage } from '../pages/new-palm/new-palm';
     LoginPage,
     DashboardPage,
     CardListPage,
+    SelectCardListPage,
+    PasswordCardPage,
     HistoryListPage,
     NewCardPage,
     UserProfilePage,
@@ -51,6 +56,8 @@ import { NewPalmPage } from '../pages/new-palm/new-palm';
     LoginPage,
     DashboardPage,
     CardListPage,
+    SelectCardListPage,
+    PasswordCardPage,
     HistoryListPage,
     NewCardPage,
     UserProfilePage,
