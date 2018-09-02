@@ -4,19 +4,26 @@ page-dashboard {
  }
 }
 
+.valor {
+  font-size: 25px;
+}
 
 .ios, .md {
- 
+
+    .phrase {
+      font-size: 20px;
+    }
+
     page-dashboard {
- 
+
         .scroll-content {
             background-color: map-get($colors, light);
         }
- 
+
         ion-card-header {
             font-weight: bold;
         }
- 
+
     }
- 
+
 }

@@ -13,7 +13,7 @@
         <ion-icon name="card"></ion-icon> Cartões
     </ion-card-header>
     <ion-card-content text-center padding>
-        <h1> Você possui 2 cartões cadastrados</h1>
+        <h1 class="phrase"> Você possui 2 cartões cadastrados</h1>
     </ion-card-content>
     <ion-list>
         <button ion-item text-right (click)="cardListPage()">
@@ -27,9 +27,9 @@
       <ion-icon name="card"></ion-icon> Gastos
     </ion-card-header>
     <ion-card-content text-center padding>
-      <h1> Seu gastos nesse mês:</h1>
+      <h1 class="phrase"> Seu gastos nesse mês:</h1>
       <ion-card-header>
-        <span item-start>R$ 1.159,23</span>
+        <span class="valor" item-start>R$ 1.159,23</span>
       </ion-card-header>
       <ion-card-content>
         <canvas #transactionsCanvas></canvas>
