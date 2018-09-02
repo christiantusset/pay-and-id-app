@@ -16,10 +16,12 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { DashboardService } from '../providers/dashboard-service/dashboard-service';
 import { CardListPage } from '../pages/card-list/card-list';
 import { SelectCardListPage } from '../pages/selectcard-list/selectcard-list';
+import { PasswordCardPage } from '../pages/password-card/password-card';
 import { HistoryListPage } from '../pages/history-list/history-list';
 import { NewCardPage } from '../pages/new-card/new-card';
 import { UserProfilePage } from "../pages/user-profile/user-profile";
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     DashboardPage,
     CardListPage,
     SelectCardListPage,
+    PasswordCardPage,
     HistoryListPage,
     NewCardPage,
     UserProfilePage
@@ -48,6 +51,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     DashboardPage,
     CardListPage,
     SelectCardListPage,
+    PasswordCardPage,
     HistoryListPage,
     NewCardPage,
     UserProfilePage

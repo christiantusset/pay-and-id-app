@@ -1,0 +1,45 @@
+<ion-navbar>
+  <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Meus Cartões</ion-title>
+</ion-navbar>
+
+<ion-content>
+
+  <ion-card-content>
+    <h1 class="title">Selecione o cartão desejado</h1>
+  </ion-card-content>
+
+  <ion-card *ngFor="let card of cards" (click)="selectCard()">
+    <ion-card-header>
+      {{card.description}}
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-list>
+        <ion-item-sliding>
+          <ion-item>
+            <img class="card-icon" [src]="'../assets/imgs/brands/' + card.brand + '.svg'"/>
+
+            <span class="description">{{card.number}}</span>
+
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color="primary">
+              <ion-icon name="archive"></ion-icon>
+              Inativar
+            </button>
+            <button ion-button color="danger">
+              <ion-icon name="trash"></ion-icon>
+              Remover
+            </button>
+          </ion-item-options>
+
+        </ion-item-sliding>
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
