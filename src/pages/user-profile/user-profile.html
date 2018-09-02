@@ -27,7 +27,10 @@
     </ion-item>
 
     <div padding></div>
-    <button (click)="salvar()" padding ion-button full>Salvar</button>
+
+    <ion-fab right bottom>
+      <button (click)="save()" ion-fab color="green"><ion-icon name="checkmark"></ion-icon></button>
+    </ion-fab>
 
   </ion-list>
 </ion-content>
