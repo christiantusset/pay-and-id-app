@@ -9,6 +9,43 @@
 
 <ion-content padding>
   
-  Leitura de QR code
+  <div *ngIf="isPalmRegistered" class="staus-ok">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <div class="description">Palma da mão cadastrada com sucesso.</div>
+    </div>
+
+  <div *ngIf="!isPalmRegistered && !waitingPalmSecure" class="status-not-registered">
+    
+    <div class="register-title">
+      Cadastre a palma da sua palma em poucos passos!
+    </div>
+
+    
+    <ion-card>
+        <ion-card-content>
+          <span class="marker">1.</span> Leia o QR Code apresentado no dispositivo PAY&ID.
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
+          <span class="marker">2.</span>  Aproxime a palma de sua mão ao dispositivo e aguarde alguns instantes.
+     </ion-card-content>
+        </ion-card>
+    <button class="register-button" ion-button block large (click)="scan()">Iniciar</button>
+
+  </div>
+
+
+  <div class="waiting-palm-secure" *ngIf="!isPalmRegistered  && waitingPalmSecure">
+    
+    <div class="palm-icon">
+        <ion-icon ios="ios-hand-outline" md="ios-hand-outline"></ion-icon>
+        <ion-icon ios="ios-wifi-outline" md="ios-wifi-outline"></ion-icon>
+    </div>
+    <span class="description">
+      Aproxime a palma de sua mão ao dispositivo PAY&amp;ID
+    </span>
+  </div>
 
 </ion-content>

@@ -1,44 +1,51 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
+import { BarcodeScanner ,BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 
 @Component({
   selector: 'page-palm-register',
   templateUrl: 'palm-register.html'
 })
 export class PalmRegisterPage implements OnInit {
+  options :BarcodeScannerOptions;
 
-  constructor(public navCtrl: NavController, private qrScanner: QRScanner) {
+  constructor(public navCtrl: NavController,private barcodeScanner: BarcodeScanner) {
+  }    
+  
+  scanData : {};
 
-  }
+  isPalmRegistered = false;
+
+  waitingPalmSecure = false;
 
   ngOnInit(): void {
-    this.qrScanner.prepare()
-    .then((status: QRScannerStatus) => {
-      if (status.authorized) {
-        // camera permission was granted
-        console.error("alow");
+         
+  }
 
-        // start scanning
-        let scanSub = this.qrScanner.scan().subscribe((text: string) => {
-          console.log('Scanned something', text);
+  scan() {
+    this.options = {
+      prompt : "Leia o QR Code no dispositivo PAY&ID"
+    }
+    this.barcodeScanner.scan(this.options).then((barcodeData) => {
 
-          this.qrScanner.hide(); // hide camera preview
-          scanSub.unsubscribe(); // stop scanning
-        });
-        this.qrScanner.show();
-      } else if (status.denied) {
-        // camera permission was permanently denied
-        // you must use QRScanner.openSettings() method to guide the user to the settings page
-        // then they can grant the permission from there
-        console.error('permanent denied');
-      } else {
-        console.error('temporary denied');
-        // permission was denied, but not permanently. You can ask for permission again at a later time.
-      }
-  })
-  .catch((e: any) => console.log('Error is', e));
-    
+        console.log(barcodeData);
+        this.scanData = barcodeData;
+        this.waitingPalmSecure = true;
+        this.waitForPalmSecure();
+        
+    }, (err) => {
+        console.log("Error occured : " + err);
+        if(err === 'cordova_not_available') {
+          this.waitForPalmSecure();
+        }
+    });  
+  }
+  
+  waitForPalmSecure() {
+    setTimeout(() => {
+      this.isPalmRegistered = true;
+      this.waitingPalmSecure = true;
+    }, 7000);
   }
 
 }

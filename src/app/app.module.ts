@@ -17,7 +17,7 @@ import { DashboardService } from '../providers/dashboard-service/dashboard-servi
 import { CardListPage } from '../pages/card-list/card-list';
 import { NewCardPage } from '../pages/new-card/new-card';
 import {UserProfilePage} from "../pages/user-profile/user-profile";
-import { QRScanner } from '@ionic-native/qr-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,7 @@ import { QRScanner } from '@ionic-native/qr-scanner';
     AuthenticatedRequest,
     AuthenticationService,
     DashboardService,
-    QRScanner
+    BarcodeScanner
   ]
 })
 export class AppModule {}

@@ -1,3 +1,84 @@
 page-palm-register {
 
+    .staus-ok {
+        
+
+        ion-icon {
+            color: green;
+            font-size: 72pt;;
+        }
+        .description {
+            font-size: 24pt;
+            margin-top: 15px; 
+        }
+       
+    }
+
+    .waiting-palm-secure {
+        font-size: 18px;
+    }
+  
+    .staus-ok, .status-not-registered, .waiting-palm-secure {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        top: 50vh;
+        transform: translateY(-75%);
+    }
+
+    .waiting-palm-secure {
+        transform: translateY(-85%);
+    }
+    .status-not-registered {
+        padding: 15px;
+    }
+    .register-title {
+        font-size: 18pt;
+        margin-bottom: 30px;
+    }
+    
+    .marker {
+        color: blue;
+        font-size: 19pt;
+        
+    }
+
+    .status-not-registered {
+        ion-card-content {
+            font-size: 18px;
+        }    
+    }
+
+   
+
+    .register-button {
+        margin-top: 30px;
+    }
+
+    .palm-icon {
+        height: 250px;
+        ion-icon {
+            position: absolute;
+            color: blue;
+            font-size: 70px;
+            &:first-child {
+                font-size: 138px;
+                margin-left: -62px;
+                margin-top: 30px;
+                transform: rotate(50deg);
+            }
+            &:last-child {
+                margin-top: 140px;
+                 left: 50%;
+            }
+        }
+
+
+    }
+
+    .waiting-palm-secure {
+        .description {
+            font-size: 18pt;
+        }
+    }
 }
