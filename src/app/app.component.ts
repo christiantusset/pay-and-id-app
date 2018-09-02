@@ -9,13 +9,14 @@ import {UserProfilePage} from "../pages/user-profile/user-profile";
 import { PalmRegisterPage } from '../pages/palm-register/palm-register';
 import {NewPaymentPage} from '../pages/new-payment/new-payment';
 import {NewPalmPage} from '../pages/new-palm/new-palm';
+import { PasswordCardPage } from '../pages/password-card/password-card';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = NewPalmPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 

@@ -7,10 +7,10 @@ import { AlertController } from 'ionic-angular';
 })
 export class UserProfilePage {
 
-  public userName = 'Christian Tusset';
-  public email = 'christiantusset@gmail.com';
-  public telefone = '47997061245';
-  public senha = '123456';
+  public userName = 'Fulano de Tal';
+  public email = 'payandid@gmail.com';
+  public telefone = '(47) 1111-1111';
+  public senha = '99999';
 
   constructor(public alertCtrl: AlertController) {
   }

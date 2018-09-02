@@ -4,7 +4,7 @@ import { NewPaymentPage } from '../new-payment/new-payment';
 
 
 @Component({
-  selector: 'password-card',
+  selector: 'page-password-card',
   templateUrl: 'password-card.html'
 })
 

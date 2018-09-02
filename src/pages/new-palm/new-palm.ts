@@ -17,7 +17,7 @@ export class NewPalmPage implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.navCtrl.push(WaitPalmPage, {nextPage: NewPaymentPage})
-    }, 2000);
+    }, 5000);
   }
 
 

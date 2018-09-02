@@ -18,9 +18,8 @@ export class WaitPalmPage implements OnInit {
   
   waitForPalmSecure() {
     setTimeout(() => {
-      this.navCtrl.pop();
       this.navCtrl.push(this.navParams.get('nextPage'));
-    }, 3000);
+    }, 5000);
   }
 
 }

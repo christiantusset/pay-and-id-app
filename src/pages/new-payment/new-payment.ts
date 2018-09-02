@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { WaitPalmPage } from '../wait-palm/wait-palm';
 import { NewPalmPage } from '../new-palm/new-palm';
+import { SelectCardListPage } from '../selectcard-list/selectcard-list';
 
 @Component({
   selector: 'page-new-payment',
@@ -20,12 +21,13 @@ export class NewPaymentPage implements OnInit {
   }
 
   next() {
-    this.navCtrl.push(WaitPalmPage);
+
+  
+    this.navCtrl.push(WaitPalmPage, {nextPage: SelectCardListPage});
   
   }
 
   newUser() {
-    this.navCtrl.pop();
     this.navCtrl.push(NewPalmPage, {nextPage: NewPaymentPage});
   }
 
