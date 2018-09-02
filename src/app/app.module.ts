@@ -19,6 +19,9 @@ import { HistoryListPage } from '../pages/history-list/history-list';
 import { NewCardPage } from '../pages/new-card/new-card';
 import {UserProfilePage} from "../pages/user-profile/user-profile";
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { NewPaymentPage } from '../pages/new-payment/new-payment';
+import { WaitPalmPage } from '../pages/wait-palm/wait-palm';
+import { NewPalmPage } from '../pages/new-palm/new-palm';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     CardListPage,
     HistoryListPage,
     NewCardPage,
-    UserProfilePage
+    UserProfilePage,
+    NewPaymentPage,
+    WaitPalmPage,
+    NewPalmPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,10 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     CardListPage,
     HistoryListPage,
     NewCardPage,
-    UserProfilePage
+    UserProfilePage,
+    NewPaymentPage,
+    WaitPalmPage,
+    NewPalmPage
   ],
   providers: [
     StatusBar,

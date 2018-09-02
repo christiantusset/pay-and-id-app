@@ -1,0 +1,40 @@
+page-wait-palm {
+
+    .waiting-palm-secure{
+        width: 100%;
+        text-align: center;
+        position: relative;
+        top: 50vh;
+        transform: translateY(-75%);
+        font-size: 18px;
+        transform: translateY(-85%);
+        .description {
+            font-size: 18pt;
+        }
+    }
+
+
+
+    .palm-icon {
+        height: 250px;
+        ion-icon {
+            position: absolute;
+            color: blue;
+            font-size: 70px;
+            &:first-child {
+                font-size: 138px;
+                margin-left: -62px;
+                margin-top: 30px;
+                transform: rotate(50deg);
+            }
+            &:last-child {
+                margin-top: 140px;
+                 left: 50%;
+            }
+        }
+
+
+    }
+
+
+}

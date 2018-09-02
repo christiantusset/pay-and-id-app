@@ -1,0 +1,38 @@
+
+
+<ion-content padding>
+  <div><h3>PAY&ID</h3></div>
+   
+
+  <div class="payment">
+    <!-- <ion-item>
+      <ion-label floating>Insira algum valor para iniciar.</ion-label>
+      <ion-input [(ngModel)]="paymentValue" type="text"></ion-input> 
+    </ion-item> -->
+    <ion-item>
+        <ion-label color="primary">R$ </ion-label>
+        <ion-input placeholder="00,00"></ion-input>
+      </ion-item>
+    
+
+  </div>
+
+  <ion-fab right bottom>
+      <button (click)="next()" ion-fab color="secondary"><ion-icon name="checkmark"></ion-icon></button>
+    </ion-fab>
+
+    <ion-fab left bottom>
+        <button (click)="next()" ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+      </ion-fab>
+  <div class="waiting-palm-secure" *ngIf="!isPalmRegistered  && waitingPalmSecure">
+    
+    <div class="palm-icon">
+        <ion-icon ios="ios-hand-outline" md="ios-hand-outline"></ion-icon>
+        <ion-icon ios="ios-wifi-outline" md="ios-wifi-outline"></ion-icon>
+    </div>
+    <span class="description">
+      Aproxime a palma de sua mão ao dispositivo PAY&amp;ID
+    </span>
+  </div>
+
+</ion-content>

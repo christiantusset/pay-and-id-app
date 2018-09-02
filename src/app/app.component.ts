@@ -7,14 +7,15 @@ import { LoginPage } from '../pages/login/login';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import {UserProfilePage} from "../pages/user-profile/user-profile";
 import { PalmRegisterPage } from '../pages/palm-register/palm-register';
-
+import {NewPaymentPage} from '../pages/new-payment/new-payment';
+import {NewPalmPage} from '../pages/new-palm/new-palm';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = NewPalmPage;
 
   pages: Array<{title: string, component: any}>;
 
